@@ -1,0 +1,22 @@
+name: Self Hosted Runner Test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Show System Info
+        run: |
+          echo "Running on self hosted runner"
+          uname -a
+
+      - name: Print Date
+        run: date
