@@ -17,6 +17,8 @@ jobs:
         run: |
           echo "Running on self hosted runner"
           uname -a
+      - name: Build Docker Image
+        run: docker build -t test-image .
 
       - name: Print Date
         run: date
